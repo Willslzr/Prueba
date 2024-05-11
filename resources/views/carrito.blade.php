@@ -27,7 +27,7 @@
             </a>
         </nav>
     </header>
-    @if (!empty($carrito))
+    @if (empty($carrito))
     <div class="content" style="margin-top: 200px; margin-bottom: 200px;">
         <h1>No hay objetos en el carrito.</h1>
     </div>
@@ -42,8 +42,8 @@
                     <img src="{{ asset($item->imagen_referencia) }}" alt="alt" width="400">
                 </div>
                 <div class="producto-detalles">
-                    <p class="producto-id">{{ $item->id }}</p>
-                    <p class="producto-nombre">{{ $item->nombre }}</p>
+                    <p class="producto-id">ID: {{ $item->id }}</p>
+                    <p class="producto-nombre">Nombre: {{ $item->nombre }}</p>
                     <p class="producto-descripcion">{{ $item->descripcion }}</p>
                 </div>
                 <div class="producto-acciones">

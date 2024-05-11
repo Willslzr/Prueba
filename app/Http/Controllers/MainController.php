@@ -23,6 +23,10 @@ class MainController extends Controller
     public function carrito(){
         $carrito = Carritos::all();
 
+        if ($carrito->isEmpty()) {
+            $carrito = null;
+        }
+
         return view('carrito', compact('carrito'));
     }
 
